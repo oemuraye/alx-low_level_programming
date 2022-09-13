@@ -1,1 +1,1 @@
-0-Positive anything is better than negative nothing
+0 - Write a program that prints Holberton, followed by a new line.
