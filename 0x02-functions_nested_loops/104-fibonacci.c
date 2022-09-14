@@ -1,31 +1,30 @@
 #include <stdio.h>
-
 /**
- * main - Entry point, prints the first 50 fibonacci numbers
+ * main - main function
  *
- * Return: Always 0
+ * Return: nothing
  */
 int main(void)
 {
-	int counter = 0;
-	unsigned long first = 0;
-	unsigned long second = 1;
-	unsigned long fib;
+	int counter = 2;
 
-	while (counter <= 97)
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
+
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
 	{
-		fib = first + second;
-		if (counter < 97)
-		{
-			printf("%lu, ", fib);
-		}
-		else
-		{
-			printf("%lu", fib);
-		}
-		first = second;
-		second = fib;
 		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 	return (0);
