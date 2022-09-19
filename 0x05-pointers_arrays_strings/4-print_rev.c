@@ -1,22 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /**
- *_puts - prints a string
- * @str: string to print
- *
- * Description: prints a string
- * On success: returns no error
- */
+*print_rev - Prints a string in reverse order
+*@s: String to reverse
+*Return: Nothing
+*/
 
-void _puts(char *str)
+void print_rev(char *s)
 {
-	int i = 0;
+	int len = strlen(s);
 
-	while (*(str + i) != '\0')
-	{
-		putchar(*(str + i));
-		i++;
-	}
+	while (len--)
+		putchar(*(s + len));
 	putchar(10);
 }
