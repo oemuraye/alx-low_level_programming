@@ -1,35 +1,35 @@
-nes (31 sloc)  520 Bytes
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
 /**
-* main - adds numbers
-* @argc: number of arguments passed to the function
-* @argv: argument vector of pointers to strings
-*
-* Return: 0 if no errors, else 1
-*/
-
+ * main - Program that prints the result adds positive numbers
+ * @argc: count
+ * @argv: array
+ *
+ * Return: Always 0
+ **/
 int main(int argc, char *argv[])
 {
-	int a = 0, i, j;
+	int i, j, add = 0, stop;
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j]; j++)
+		for (j = 0; *(*(argv + i) + j); j++)
 		{
-			if (isdigit(argv[i][j]) == 0)
+			stop = 1;
+			if (*(*(argv + i) + j) >= 48 && *(*(argv + i) + j) <= 57)
 			{
-				puts("Error");
+				stop = 0;
+			} else
+			{
+				printf("Error\n");
 				return (1);
 			}
 		}
+
+			if (stop == 0)
+				add = add + atoi(*(argv + i));
 	}
-	for (i = 1; i < argc; i++)
-	{
-		a += atoi(argv[i]);
-	}
-	printf("%d\n", a);
+	printf("%d\n", add);
 	return (0);
 }
