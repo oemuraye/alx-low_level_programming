@@ -8,28 +8,24 @@
  *
  * Return: Always 0
  **/
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, j, add = 0, stop;
+	int sum, i, j;
 
+	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; *(*(argv + i) + j); j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			stop = 1;
-			if (*(*(argv + i) + j) >= 48 && *(*(argv + i) + j) <= 57)
-			{
-				stop = 0;
-			} else
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-
-			if (stop == 0)
-				add = add + atoi(*(argv + i));
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", add);
+
+	printf("%d\n", sum);
 	return (0);
 }
