@@ -1,6 +1,6 @@
-#include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 /**
  * main - Program that prints the result adds positive numbers
  * @argc: count
