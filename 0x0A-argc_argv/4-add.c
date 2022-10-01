@@ -3,11 +3,11 @@
 #include <string.h>
 
 /**
- * main - Program that prints the result adds positive numbers
- * @argc: count
- * @argv: array
+ * main - Program that adds positive numbers
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
  *
- * Return: Always 0
+ * Return: 0
  **/
 int main(int argc, char *argv[])
 {
