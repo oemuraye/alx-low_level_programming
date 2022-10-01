@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+
 /**
  * main - Program that prints the result adds positive numbers
  * @argc: count
@@ -8,7 +9,7 @@
  *
  * Return: Always 0
  **/
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int sum, i, j;
 
