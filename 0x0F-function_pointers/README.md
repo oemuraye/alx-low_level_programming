@@ -8,4 +8,3 @@
     This file should contain the function that selects the correct function to perform the        operation asked by the user. You’re not allowed to declare any other function.
  * 3-main.c
     This file should contain your main function only.
-4. Write a program that prints the opcodes of its own main function.
